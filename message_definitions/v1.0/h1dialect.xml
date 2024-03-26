@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+
+<mavlink>
+	<include>common.xml</include>
+	<dialect>4</dialect>
+
+	<messages>
+
+		<message id="7002" name="STOP_MSG">
+			<description>tüm gorevleri durdurmak icin  offboard mesaji</description>
+			<field type="uint64_t" name="timestamp"></field>
+		</message>
+
+
+		<message id="7003" name="DALIS_MSG">
+			<description>dalış için yukarıya gönderilecek mesaj</description>
+			<field type="uint64_t" name="timestamp"></field>
+			<field type="float" name="yukseklik"></field>
+			<field type="float" name="gelis_acisi"></field>
+			<field type="float" name="dalis_acisi"></field>
+			<field type="float" name="alt_sinir"></field>
+			<field type="float" name="loiter_radius"></field>
+
+		</message>
+
+		<message id="7004" name="NOKTAYA_GIT_MSG">
+			<description>noktaya gitmek için mesaj</description>
+			<field type="uint64_t" name="timestamp"></field>
+			<field type="float" name="x_m"></field>
+			<field type="float" name="y_m"></field>
+		</message>
+
+
+		<message id="7005" name="KILIT_MSG">
+			<description>rakip gps  bilgileri</description>
+			<field type="uint64_t" name="timestamp"></field>
+			<field type="float" name="latitude"></field>
+			<field type="float" name="longitude"></field>
+			<field type="float" name="yukseklik"></field>
+			<field type="float" name="hiz"></field>
+			<field type="float" name="heading"></field>
+			<field type="float" name="roll"></field>
+			<field type="float" name="pitch"></field>
+		</message>
+
+		<message id="7006" name="QR_SET_MSG">
+			<description>qr koordinatları</description>
+			<field type="uint64_t" name="timestamp"></field>
+			<field type="float" name="latitude"></field>
+			<field type="float" name="longitude"></field>
+		</message>
+
+
+	
+		<message id="2002" name="H1_KILIT_MSG">
+			<description>sunucuya gönderilecek kilit bilgileri</description>
+			<field type="uint64_t" name="timestamp"></field>
+			<field type="uint16_t" name="baslangic_saat"></field>
+			<field type="uint16_t" name="baslangic_dakika"></field>
+			<field type="uint16_t" name="baslangic_saniye"></field>
+			<field type="uint16_t" name="baslangic_milisaniye"></field>
+			<field type="uint16_t" name="bitis_saat"></field>
+			<field type="uint16_t" name="bitis_dakika"></field>
+			<field type="uint16_t" name="bitis_saniye"></field>
+			<field type="uint16_t" name="bitis_milisaniye"></field>
+		</message>
+
+
+		<message id="2004" name="H1_PID_KILIT">
+			<description>kilit  pıd katsayıları</description>
+			<field type="uint64_t" name="timestamp"></field>
+			<field type="float" name="roll_p"></field>
+			<field type="float" name="roll_i"></field>
+			<field type="float" name="roll_d"></field>
+			<field type="float" name="pitch_p"></field>
+			<field type="float" name="pitch_i"></field>
+			<field type="float" name="pitch_d"></field>
+			<field type="float" name="throttle_p"></field>
+			<field type="float" name="throttle_i"></field>
+			<field type="float" name="throttle_d"></field>
+
+		</message>
+
+		<message id="2005" name="H1_PID_YAKLASMA">
+			<description>yaklaşma pıd katsayıları</description>
+			<field type="uint64_t" name="timestamp"></field>
+			<field type="float" name="hiz_p"></field>
+			<field type="float" name="hiz_i"></field>
+			<field type="float" name="hiz_d"></field>
+
+		</message>
+
+		<message id="2006" name="H1_SUNUCU_SAATI">
+			<description>sunucuya gönderilecek sunucu saati bilgileri</description>
+			<field type="uint64_t" name="timestamp"></field>
+			<field type="uint16_t" name="gUn"></field>
+			<field type="uint16_t" name="saat"></field>
+			<field type="uint16_t" name="dakika"></field>
+			<field type="uint16_t" name="saniye"></field>
+			<field type="uint16_t" name="milisaniye"></field>
+
+		</message>
+
+
+		<message id="2007" name="H1_DALIS_MSG">
+			<description>sunucuya gönderilecek dalış bilgileri</description>
+			<field type="uint64_t" name="timestamp"></field>
+			<field type="uint16_t" name="baslangic_saat"></field>
+			<field type="uint16_t" name="baslangic_dakika"></field>
+			<field type="uint16_t" name="baslangic_saniye"></field>
+			<field type="uint16_t" name="baslangic_milisaniye"></field>
+			<field type="uint16_t" name="bitis_saat"></field>
+			<field type="uint16_t" name="bitis_dakika"></field>
+			<field type="uint16_t" name="bitis_saniye"></field>
+			<field type="uint16_t" name="bitis_milisaniye"></field>
+			<field type="char[100]" name="qr_metni"></field>
+		</message>
+
+
+		<message id="2008" name="H1_NESNE_TESPIT_MSG">
+			<description>uçak kameraya girdiğinde çalışan sunucuya gönderilecek nesne tespit bilgileri</description>
+			<field type="uint64_t" name="timestamp"></field>
+			<field type="uint16_t" name="hedef_merkez_x"></field>
+			<field type="uint16_t" name="hedef_merkez_y"></field>
+			<field type="uint16_t" name="hedef_genislik"></field>
+			<field type="uint16_t" name="hedef_yUkseklik"></field>
+		</message>
+
+	</messages>
+
+
+
+
+</mavlink>
